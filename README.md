@@ -13,12 +13,11 @@ The software that uses the dotfiles inside this repo are:
     - Hyprlock
     - Hypridle (Not working rn)
 - Waybar
-- Waybar
 - Neovim
 - Rofi
 - Kitty
 - Fastfetch
-- Dunst
+- Swaync
 - Cava
 ## Instalation
 1. clone this repo using the following link:

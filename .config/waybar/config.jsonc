@@ -3,12 +3,21 @@
   "position": "top",
   "height": 30,
   "modules-left": [
+    "clock",
+    "tray",
+    "mpris"
+  ],
+  "modules-center": [
     "hyprland/workspaces"
   ],
-  "modules-center": [],
   "modules-right": [
+    "custom/notifications",
+    "hyprland/language",
+    "cpu",
+    "memory",
     "bluetooth",
-    "clock"
+    "network",
+    "group/group-power"
   ],
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -19,19 +28,90 @@
       "active": ""
     }
   },
-  "sway/window": {
-    "max-length": 50
-  },
   "clock": {
-    "format": "<b>{:%D - %H:%M}</b>"
+    "format": "<b>  {:%D  -    %H:%M}</b>"
   },
   "bluetooth": {
     // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-    "format": " {status}",
-    "format-disabled": "", // an empty format will hide the module
-    "format-connected": " {num_connections} connected",
-    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "format": "",
+    "format-disabled": "󰂲", // an empty format will hide the module
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "  {percentage}%",
+    "tooltip": false
+  },
+  "network": {
+    "format": "{icon}",
+    "format-icons": {
+      "ethernet": "󰒢",
+      "wifi": "",
+      "disabled": "󰂭"
+    },
+    "toltip": false,
+  },
+  "group/group-power": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/power",
+      "custom/logout",
+      "custom/lock",
+      "custom/reboot",
+    ],
+  },
+  "custom/power": {
+    "format": "",
+    "on-click": "shutdown now",
+    "tooltip": "false"
+  },
+  "custom/reboot": {
+    "format": "",
+    "on-click": "reboot now",
+    "tooltip": "false"
+  },
+  "custom/lock": {
+    "format": "",
+    "on-click": "hyprlock",
+    "tooltip": "false"
+  },
+  "custom/logout": {
+    "format": "󰗽",
+    "on-click": "killall -u kevin",
+    "tooltip": "false"
+  },
+  "hyprland/language": {
+    "format": "  {shortDescription}",
+    "on-click": " hyprctl switchxkblayout current next"
+  },
+  "mpris": {
+    "enable-tooltip-len-limits": true,
+    "title-len": 20,
+    "album-len": 10,
+    "format": "{player_icon} {title} - {album} {status_icon}",
+    "format-paused": "{player_icon} {title} - {album} {status_icon} ",
+    "format-stopped": "{stopped_icon} Sin reproducción.",
+    "player-icons": {
+      "default": "▶",
+      "spotify": "󰓇 "
+    },
+    "status-icons": {
+      "paused": "󰏤",
+      "playing": "",
+      "stopped": ""
+    },
+    "tooltip": false
+  },
+  "custom/notifications": {
+    "on-click": "swaync-client -t -sw",
+    "format": " {}"
   }
 }
