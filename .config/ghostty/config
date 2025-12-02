@@ -1,0 +1,17 @@
+# My own GhosTTY configuration file.
+# Visuals
+font-family = Maple Mono
+font-size = 13
+cursor-style = block
+
+theme = catppuccin-mocha
+window-theme = ghostty
+background-opacity = 1
+
+window-padding-x = 10
+window-decoration = client
+window-padding-y = 10
+
+# Adicional stuff
+adw-toolbar-style = flat
+gtk-wide-tabs = false
