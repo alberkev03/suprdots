@@ -1,7 +1,9 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 30,
+  "width": 1900,
+  "height": 42,
+  "margin": 0,
   "modules-left": [
     "clock",
     "tray",
@@ -63,8 +65,8 @@
     },
     "modules": [
       "custom/power",
-      "custom/logout",
       "custom/lock",
+      "custom/logout",
       "custom/reboot",
     ],
   },
