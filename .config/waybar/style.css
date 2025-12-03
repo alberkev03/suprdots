@@ -1,80 +1,139 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Rubik, sans-serif;
-    font-size: 100%;
+    font-family: JetBrainsMono, sans-serif;
+    font-size: 16;
 }
 
 window#waybar {
-    background-color: #1e1e2e;
-    border-radius: 0 0 8 8
+    background-color: transparent;
 }
 
 
 #workspaces {
-  background-color: #313244;
-  margin: 4px;
+  background-color: #11111b;
+  margin: 4 0 0 0;
+  padding: 3;
   border-radius: 20px;
 }
 #workspaces button {
   background-color: transparent;
   color: #6c7086;
+  transition: ease-in-out 100ms;
 }
 #workspaces button:hover {
   color: #bac2de;
   background-color: transparent;
   padding: 0 20px 0 20px;
-  transition: 300ms;
-  transition-delay: 150ms;
+  transition: ease-in-out 300ms;
 }
 #workspaces button.active {
   color: #11111b;
-  background-color: #89b4fa;
+  background: linear-gradient(45deg,rgba(137, 180, 250, 1) 0%, rgba(180, 190, 254, 1) 100%);
   padding: 0 25px 0 25px;
   border-radius: 20px;
-  transition: linear 100ms;
+  transition: ease-in-out 300ms;
 }
 #workspaces button.active:hover {
   margin: 0;
+  background: linear-gradient(45deg,rgba(180, 190, 254, 1) 0%, rgba(137, 180, 250, 1) 100%);
+  transition: ease-in-out 300ms
+}
+#workspaces button.active:active {
+  margin: 4px;
 }
 
 .modules-left {
+  margin: 4 0 0 0;
   border-radius: 8;
+  background-color: #11111b;
 }
 #clock {
   margin: 0 8 0 12;
-  color: #cdd6f4;
+  color: #cba6f7;
 }
-#tray {
+#tray, #audio {
   margin: 4;
   border-radius: 6;
   padding: 0 10 0 10; 
-  background-color: #313244;
+  background-color: #1e1e2e;
   color: #cdd6f4;
 }
 #tray menu {
   background-color: #1e1e2e;
   color: #cdd6f4;
 }
+#audio:hover {
+  border: 2px solid #89b4fa;
+  transition: 200ms;
+}
+#pulseaudio {
+  margin: 0 5 0 4;
+}
+#pulseaudio-slider {
+  margin: 0 4 0 10;
+  padding: 0;
+  border: 0px;
+  color: #74c7ec;
+}
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    background-color: transparent;
+    border: 0px;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+  min-height: 16px;
+  min-width: 80px;
+  border-radius: 8;
+  background-color: #313244;
+}
+#pulseaudio-slider highlight {
+  border-radius: 8;
+  background: linear-gradient(90deg,rgba(137, 180, 250, 1) 50%, rgba(116, 199, 236, 1) 100%);
+}
 #mpris {
-  background-color: #a6e3a1;
-  color: #1e1e2e;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  border: 2px solid #a6e3a1;
   margin: 4;
   border-radius: 6;
   padding: 0 10 0 10;
+  transition: 300ms;
+}
+#mpris.paused {
+  border: 2px solid #1e1e2e;
+  transition: 300ms;
+}
+#mpris:hover {
+  background-color: #a6e3a1;
+  transition: 300ms;
+  color: #1e1e2e;
+  border: 2px solid #a6e3a1;
+}
+#mpris.stopped {
+  border: 0;
+  background: transparent;
+  color: transparent;
 }
 .modules-right {
-  background-color: #313244;
+  margin: 4 0 0 0;
+  background-color: #11111b;
   border-radius: 8;
 }
 #custom-notifications {
-  background-color: #45475a;
+  background-color: #1e1e2e;
   color: #74c7ec;
   margin: 4;
   padding: 0 5 0 8;
   border-radius: 6px;
+  transition: 300ms;
+  border: 2px solid #1e1e2e
 }
 #custom-notifications:hover {
-  background-color: #585b70;
+  background-color: #313244;
+  margin: 4;
+  border: 2px solid #74c7ec;
   transition: 300ms;
 }
 #language, #cpu, #memory, #bluetooth, #network, #group-power {
@@ -83,9 +142,9 @@ window#waybar {
   color: #cdd6f4;
 }
 #group-power {
-  background-color: #45475a;
+  background-color: #1e1e2e;
   border-radius: 6;
-  padding: 0 4 0 2;
+  padding: 0 4 0 4;
   transition: 150ms;
 }
 

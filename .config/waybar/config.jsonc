@@ -1,12 +1,12 @@
 {
   "layer": "top",
   "position": "top",
-  "width": 1900,
-  "height": 42,
-  "margin": 0,
+  "width": 1902,
+  "height": 44,
   "modules-left": [
     "clock",
     "tray",
+    "group/audio",
     "mpris"
   ],
   "modules-center": [
@@ -26,12 +26,35 @@
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "format-icons": {
-      "default": "",
+      "default": "",
       "active": ""
     }
   },
   "clock": {
-    "format": "<b>  {:%D  -    %H:%M}</b>"
+    "format": "<b> {:%D  %H:%M}</b>"
+  },
+  "group/audio": {
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": true,
+    },
+    "orientation": "inherit",
+    "modules": [
+      "pulseaudio",
+      "pulseaudio/slider"
+    ]
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 0,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
   },
   "bluetooth": {
     // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
@@ -41,21 +64,21 @@
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
   },
   "cpu": {
-    "format": "  {usage}%",
+    "format": " <b>{usage}%</b>",
     "tooltip": false
   },
   "memory": {
-    "format": "  {percentage}%",
+    "format": " <b>{percentage}%</b>",
     "tooltip": false
   },
   "network": {
     "format": "{icon}",
+    "toltip": false,
     "format-icons": {
       "ethernet": "󰒢",
       "wifi": "",
       "disabled": "󰂭"
     },
-    "toltip": false,
   },
   "group/group-power": {
     "orientation": "inherit",
@@ -91,29 +114,30 @@
     "tooltip": "false"
   },
   "hyprland/language": {
-    "format": "  {shortDescription}",
+    "format": " <b>{shortDescription}</b>",
     "on-click": " hyprctl switchxkblayout current next"
   },
   "mpris": {
     "enable-tooltip-len-limits": true,
     "title-len": 20,
     "album-len": 10,
-    "format": "{player_icon} {title} - {album} {status_icon}",
-    "format-paused": "{player_icon} {title} - {album} {status_icon} ",
-    "format-stopped": "{stopped_icon} Sin reproducción.",
+    "format": "<b>{player_icon} {title} - {album} {status_icon}</b>",
+    "format-paused": "<b>{player_icon} {title} - {album} {status_icon} </b>",
+    "format-stopped": "<b>{stopped_icon} Sin reproducción.</b>",
     "player-icons": {
       "default": "▶",
-      "spotify": "󰓇 "
+      "spotify": "󰓇"
     },
     "status-icons": {
-      "paused": "󰏤",
-      "playing": "",
+      "paused": "",
+      "playing": "󰏤 ",
       "stopped": ""
     },
     "tooltip": false
   },
   "custom/notifications": {
     "on-click": "swaync-client -t -sw",
-    "format": " {}"
+    "format": " {}",
+    "tooltip": false,
   }
 }
