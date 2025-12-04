@@ -6,7 +6,7 @@
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
- font_family      Maple Mono
+ font_family      JetBrains Mono
  bold_font        auto
  italic_font      auto
  bold_italic_font auto
@@ -794,7 +794,7 @@ disable_ligatures never
 #: to the custom theme name specified in the XDG Sound theme
 #: specification <https://specifications.freedesktop.org/sound-theme-
 #: spec/latest/sound_lookup.html>, falling back to the default
-#: freedesktop theme if it does not exist. To change your sound kitty.conftheme
+#: freedesktop theme if it does not exist. To change your sound theme
 #: desktop wide, create
 #: :file:~/.local/share/sounds/__custom/index.theme` with the
 #: contents:
@@ -1178,7 +1178,7 @@ disable_ligatures never
 
 #: The foreground and background colors.
 
- background_opacity 0.8
+ background_opacity 1
 
 #: The opacity of the background. A number between zero and one, where
 #: one is opaque and zero is fully transparent. This will only work if
@@ -2598,9 +2598,3 @@ disable_ligatures never
 #: }}}
 
 #: }}}
-
-
-# BEGIN_KITTY_THEME
-# Catppuccin-Mocha
-include current-theme.conf
-# END_KITTY_THEME

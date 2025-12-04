@@ -21,22 +21,25 @@ window#waybar {
   transition: ease-in-out 100ms;
 }
 #workspaces button:hover {
-  color: #bac2de;
+  color: #89b4fa;
   background-color: transparent;
-  padding: 0 20px 0 20px;
-  transition: ease-in-out 300ms;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  padding: 0 15 0 15;
+  transition: ease-in-out 200ms;
 }
 #workspaces button.active {
-  color: #11111b;
+  color: transparent;
   background: linear-gradient(45deg,rgba(137, 180, 250, 1) 0%, rgba(180, 190, 254, 1) 100%);
-  padding: 0 25px 0 25px;
+  padding: 0 20px 0 20px;
   border-radius: 20px;
-  transition: ease-in-out 300ms;
+  transition: ease-in-out 200ms;
 }
 #workspaces button.active:hover {
   margin: 0;
   background: linear-gradient(45deg,rgba(180, 190, 254, 1) 0%, rgba(137, 180, 250, 1) 100%);
-  transition: ease-in-out 300ms
+  padding: 0 25 0 25;
+  transition: ease-in-out 200ms;
 }
 
 .modules-left {
@@ -119,6 +122,15 @@ window#waybar {
   background: transparent;
   color: transparent;
 }
+#mpris.playing {
+  color: #a6e3a1
+}
+#mpris.playing:hover {
+  background-color: #a6e3a1;
+  transition: 300ms;
+  color: #1e1e2e;
+  border: 2px solid #a6e3a1;
+}
 .modules-right {
   margin: 4 0 0 0;
   background-color: #11111b;
@@ -134,11 +146,25 @@ window#waybar {
   border: 2px solid #1e1e2e
 }
 #custom-notifications:hover {
-  background-color: #313244;
   margin: 4;
   border: 2px solid #74c7ec;
   transition: 300ms;
 }
+#custom-clipboard {
+  background-color: #1e1e2e;
+  color: #f38ba8;
+  margin: 4;
+  padding: 0 5 0 8;
+  border-radius: 6px;
+  transition: 300ms;
+  border: 2px solid #1e1e2e
+}
+#custom-clipboard:hover {
+  margin: 4;
+  border: 2px solid #f38ba8;
+  transition: 300ms;
+}
+
 #language, #cpu, #memory, #bluetooth, #network, #group-power {
   margin: 4;
   padding: 0 4 0 4;
@@ -148,6 +174,11 @@ window#waybar {
   background-color: #1e1e2e;
   border-radius: 6;
   padding: 0 4 0 4;
+  transition: 150ms;
+  border: 2px solid #1e1e2e;
+}
+#group-power:hover {
+  border: 2px solid #f38ba8;
   transition: 150ms;
 }
 
