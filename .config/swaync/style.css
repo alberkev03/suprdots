@@ -135,11 +135,12 @@ trough {
 
 /* control center */
 .control-center {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #313244;
-  border-radius: 12.6px;
-  background-color: #1e1e2e;
+  border-radius: 10px;
+  background-color: #181926;
+  border: 2px solid #74c7ec;
   color: #cdd6f4;
   padding: 14px;
+  margin: -2px;
 }
 
 .control-center .notification-background {

@@ -131,7 +131,7 @@
     },
     "status-icons": {
       "paused": "",
-      "playing": "󰏤 ",
+      "playing": "󰏤  ",
       "stopped": ""
     },
     "tooltip": false
@@ -139,7 +139,7 @@
   "custom/clipboard": {
     "tooltip": false,
     "format": " ",
-    "on-click": "cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+    "on-click": "cliphist list | rofi -dmenu -theme ~/.config/rofi/launchers/type-2/clipboard.rasi | cliphist decode | wl-copy"
   },
   "custom/notifications": {
     "tooltip": false,
