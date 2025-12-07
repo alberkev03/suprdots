@@ -98,12 +98,12 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch $(uname -m)"
 
 #####Personal Aliases######
-# alias btw="fastfetch"
 alias cat="bat"
 alias rm="trash"
 alias rmorphans="pacman -Qtdq | sudo pacman -Rns -"
 alias btw="fastfetch"
 alias fucking="sudo"
+alias man="wikiman"
 alias checkExe="for pid in /proc/[0-9]*; do
     owner=$(stat -c %U "$pid" 2>/dev/null)
     if [[ "$owner" == "$USER" ]]; then
@@ -118,8 +118,6 @@ done"
 ###### Miscelanius config ####
 eval "$(zoxide init zsh)"
 eval $(thefuck --alias) 
-# fastfetch
-#
 # bun completions
 [ -s "/home/kevin/.bun/_bun" ] && source "/home/kevin/.bun/_bun"
 
@@ -132,3 +130,8 @@ export PATH="$PATH:/home/kevin/.local/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+###### Custom Environment #####
+export EDITOR=nvim
+export VISUAL=nvim
+btw

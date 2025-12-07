@@ -96,12 +96,12 @@
   },
   "custom/power": {
     "format": "",
-    "on-click": "shutdown now",
+    "on-click": "systemctl poweroff",
     "tooltip": "false"
   },
   "custom/reboot": {
     "format": "",
-    "on-click": "reboot now",
+    "on-click": "systemctl reboot",
     "tooltip": "false"
   },
   "custom/lock": {
