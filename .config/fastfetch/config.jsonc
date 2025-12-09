@@ -7,8 +7,12 @@
     },
   },
   "logo": {
-    "source": "pokemon-colorscripts -r --no-title",
-    "type": "command-raw",
+    "source": "arch",
+    "type": "small",
+    "color": {
+      "1": "#7dc4e4",
+      "2": "#8aadf4"
+    },
   },
   "modules": [
     {

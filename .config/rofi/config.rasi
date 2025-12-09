@@ -1,0 +1,17 @@
+configuration {
+modes: "window,drun,run,ssh";
+font: "JetBrains Mono 14";
+show-icons: true;
+icon-theme: "Papirus";
+click-to-exit: true;
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+@theme "./theme/launcher/launcher.rasi"

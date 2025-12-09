@@ -139,7 +139,7 @@
   "custom/clipboard": {
     "tooltip": false,
     "format": " ",
-    "on-click": "cliphist list | rofi -dmenu -theme ~/.config/rofi/launchers/type-2/clipboard.rasi | cliphist decode | wl-copy"
+    "on-click": "cliphist list | rofi -dmenu -theme ~/.config/rofi/theme/clipboard/clipboard.rasi | cliphist decode | wl-copy"
   },
   "custom/notifications": {
     "tooltip": false,

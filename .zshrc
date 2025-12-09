@@ -134,4 +134,4 @@ export PATH="$PATH:/home/kevin/.local/bin"
 ###### Custom Environment #####
 export EDITOR=nvim
 export VISUAL=nvim
-btw
+pokemon-colorscripts -r --no-title

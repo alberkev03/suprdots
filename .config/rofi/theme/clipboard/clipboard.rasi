@@ -1,0 +1,59 @@
+@import "../colors/tokyonight.rasi"
+window {
+    background-color: transparent;
+    width: 400;
+    height: 600;
+    anchor: north;
+    location: northeast;
+    margin: 4px;
+}
+mainbox {
+    background-color: @background;
+    border: 2;
+    border-color: @blue;
+    border-radius: 8;
+    padding: 10;
+}
+
+inputbar {
+    enabled: true;
+    background-color: @selection;
+    border-radius: 12px;
+    padding: 10;
+    margin: 0 0 10 0;
+}
+case-indicator, entry {
+    enabled: true;
+    background-color: transparent;
+}
+prompt {
+    enabled: false;
+}
+scrollbar {
+    enabled: true;
+}
+
+listview {
+    background-color: transparent;
+    scrollbar: false;
+    cycle: true;
+}
+
+element, element-icon, element-index, element-text {
+    background-color: inherit;
+}
+element {
+    padding: 5px;
+    margin: 2px;
+    border-radius: 12px;
+}
+
+element-text {
+    color: @foreground;
+}
+element selected {
+    background-color: @blue;
+}
+element-text selected {
+    color: @background;
+}

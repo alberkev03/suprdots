@@ -1,0 +1,17 @@
+/* TokyoNight Palette */
+
+* {
+    background:     #1A1B26FF;
+    foreground:     #C0CAF5FF;
+    black:          #15161EFF;
+    red:            #F7768EFF;
+    green:          #9ECE6AFF;
+    yellow:         #E0AF68FF;
+    blue:           #7AA2F7FF;
+    magenta:        #BB9AF7FF;
+    cyan:           #7DCFFF;
+    white:          #A9B1D6FF;
+    comment:        #565F89FF;
+    selection:      #33467CFF;
+    cursor:         #C0CAF5FF;
+}
