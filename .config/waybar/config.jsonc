@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "width": 1902,
+  "width": 1920,
   "height": 44,
   "modules-left": [
     "clock",
@@ -32,7 +32,8 @@
     }
   },
   "clock": {
-    "format": "<b> {:%d/%m/%Y  %H:%M}</b>"
+    "format": "{:%H:%M}",
+    "format-alt": "{:%d/%m/%Y}",
   },
   "group/audio": {
     "drawer": {
@@ -65,11 +66,11 @@
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
   },
   "cpu": {
-    "format": " <b>{usage}%</b>",
+    "format": " {usage}%",
     "tooltip": false
   },
   "memory": {
-    "format": " <b>{percentage}%</b>",
+    "format": " {percentage}%",
     "tooltip": false
   },
   "network": {
@@ -115,23 +116,26 @@
     "tooltip": "false"
   },
   "hyprland/language": {
-    "format": " <b>{shortDescription}</b>",
+    "format": " {shortDescription}",
     "on-click": " hyprctl switchxkblayout current next"
   },
   "mpris": {
     "enable-tooltip-len-limits": true,
     "title-len": 20,
     "album-len": 10,
-    "format": "<b>{player_icon} {title} - {album} {status_icon}</b>",
-    "format-paused": "<b>{player_icon} {title} - {album} {status_icon} </b>",
-    "format-stopped": "<b>{stopped_icon} Sin reproducción.</b>",
+    "format": "{player_icon} {title} - {album} {status_icon}",
+    "format-paused": "{player_icon} {title} - {album} {status_icon} ",
+    "format-stopped": "{stopped_icon} Sin reproducción.",
+    /*"ignored-players": [
+      "brave"
+    ],*/
     "player-icons": {
-      "default": "▶",
+      "default": "󰐊",
       "spotify": "󰓇"
     },
     "status-icons": {
-      "paused": "",
-      "playing": "󰏤  ",
+      "paused": "󰐊",
+      "playing": "󰏤 ",
       "stopped": ""
     },
     "tooltip": false
@@ -143,7 +147,7 @@
   },
   "custom/notifications": {
     "tooltip": false,
-    "format": "{icon}   ",
+    "format": "{icon} ",
     "format-icons": {
       "notification": "󱅫",
       "none": "󰂜",

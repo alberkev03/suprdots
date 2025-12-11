@@ -1,4 +1,4 @@
-@import "../colors/tokyonight.rasi"
+@import "../colors/matugen.rasi"
 window {
     background-color: transparent;
     width: 400;
@@ -8,16 +8,16 @@ window {
     margin: 4px;
 }
 mainbox {
-    background-color: @background;
+    background-color: @surface;
     border: 2;
-    border-color: @blue;
+    border-color: @primary;
     border-radius: 8;
     padding: 10;
 }
 
 inputbar {
     enabled: true;
-    background-color: @selection;
+    background-color: @surface-bright;
     border-radius: 12px;
     padding: 10;
     margin: 0 0 10 0;
@@ -49,11 +49,11 @@ element {
 }
 
 element-text {
-    color: @foreground;
+    color: @primary;
 }
 element selected {
-    background-color: @blue;
+    background-color: @primary;
 }
 element-text selected {
-    color: @background;
+    color: @surface;
 }

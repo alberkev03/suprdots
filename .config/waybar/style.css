@@ -1,39 +1,39 @@
+@import "./colors.css";
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrainsMono, sans-serif;
-    font-size: 16;
+    font-family: JetBrains Mono, sans-serif;
+    font-size: 17;
     margin: 0;
     padding: 0;
-}
+    box-shadow: inherit;
+    text-shadow: inherit;
+  }
 
 window#waybar {
-    background-color: transparent;
+    background-color: @surface;
 }
 
 
 #workspaces {
-  background-color: #1a1b26;
-  margin: 4 0 0 0;
+  background-color: @background;
   border-radius: 20px;
   padding: 0 4 0 4;
 }
 #workspaces button {
   background-color: transparent;
-  color: #565f89;
+  color: @surface_bright;
   margin: 4 10 4 10;
   transition: ease-in-out 100ms;
 }
 #workspaces button:hover {
-  color: #89b4fa;
+  color: @primary;
   background-color: transparent;
-  box-shadow: inherit;
-  text-shadow: inherit;
   padding: 0 10 0 10;
   transition: ease-in-out 200ms;
 }
 #workspaces button.active {
   color: transparent;
-  background: linear-gradient(45deg,#7aa2f7 0%,#7dcfff 100%);
+  background: linear-gradient(45deg, @primary 0%, @secondary 100%);
   padding: 0 20px 0 20px;
   margin: 4 0 4 0;
   border-radius: 20px;
@@ -44,37 +44,33 @@ window#waybar {
   transition: ease-in-out 200ms;
 }
 
-.modules-left {
-  margin: 4 0 0 0;
-  border-radius: 8;
-  background-color: #1a1b26;
-}
+
 #clock {
   margin: 0 8 0 12;
-  color: #bb9af7;
+  color: @on-surface;
 }
 #tray, #audio {
   margin: 4;
   border-radius: 6;
   padding: 0 10 0 10; 
-  background-color: #24283b;
-  color: #c0caf5;
+  background-color: @surface_container;
+  color: @primary;
 }
 #tray menu {
-  background-color: #1a1b26;
-  color: #c0caf5;
+  background-color: @background;
+  color: @primary;
 }
 #audio:hover {
-  border: 2px solid #7aa2f7;
+  border: 2px solid @primary;
   transition: 200ms;
 }
 #pulseaudio {
   margin: 0 5 0 4;
-  color: #c0caf5; 
+  color: @secondary; 
   transition: 300ms;
 }
 #pulseaudio:hover {
-  color: #7aa2f7;
+  color: @primary;
   transition: 300ms;
 }
 #pulseaudio-slider {
@@ -93,90 +89,73 @@ window#waybar {
   min-height: 16px;
   min-width: 80px;
   border-radius: 8;
-  background-color: #1a1b26;
+  background-color: @background;
 }
 #pulseaudio-slider highlight {
   border-radius: 8;
-  background: linear-gradient(90deg,#7aa2f7 0%, #7dcfff 100%);
+  background: @primary;
 }
 #mpris {
-  background-color: #1a1b26;
-  color: #c0caf5;
-  border: 2px solid #1a1b26;
+  background-color: @surface_container;
+  color: @white;
+  border: 2px solid @surface_container;
   margin: 4;
   border-radius: 6;
   padding: 0 10 0 10;
   transition: 300ms;
 }
 #mpris.paused {
-  border: 2px solid #1a1b26;
+  border: 2px solid @surface_container;
   transition: 300ms;
 }
 #mpris:hover {
-  background-color: #9ece6a;
+  background-color: @primary;
   transition: 300ms;
-  color: #1a1b26;
-  border: 2px solid #9ece6a;
+  color: @surface_container;
+  border: 2px solid @primary;
 }
 
 #mpris.playing {
-  color: #9ece6a;
-  border: 2px solid #9ece6a;
+  color: @primary;
+  border: 2px solid @primary;
 }
 #mpris.playing:hover {
-  background-color: #9ece6a;
+  background-color: @primary;
   transition: 300ms;
-  color: #1a1b26;
-  border: 2px solid #9ece6a;
+  color: @surface_container;
+  border: 2px solid @primary;
 }
-.modules-right {
-  margin: 4 0 0 0;
-  border-radius: 8;
-  background-color: #1a1b26;
-}
-#custom-notifications {
-  background-color: #24283b;
-  color: #7aa2f7;
+
+#custom-notifications, #custom-clipboard {
+  background-color: @surface_container;
+  color: @primary;
   margin: 4;
   padding: 0 5 0 8;
   border-radius: 6px;
   transition: 300ms;
-  border: 2px solid #24283b
+  border: 2px solid @surface_container;
 }
-#custom-notifications:hover {
+#custom-notifications:hover, #custom-clipboard:hover {
   margin: 4;
-  border: 2px solid #7aa2f7;
+  border: 2px solid @primary;
   transition: 300ms;
 }
-#custom-clipboard {
-  background-color: #24283b;
-  color: #f7768e;
-  margin: 4;
-  padding: 0 5 0 8;
-  border-radius: 6px;
-  transition: 300ms;
-  border: 2px solid #24283b
-}
-#custom-clipboard:hover {
-  margin: 4;
-  border: 2px solid #f7768e;
-  transition: 300ms;
-}
+
 
 #language, #cpu, #memory, #bluetooth, #network, #group-power {
   margin: 4;
   padding: 0 4 0 4;
-  color: #c0caf5;
+  color: @on-surface;
 }
 #group-power {
-  background-color: #24283b;
+  background-color: @surface_container;
   border-radius: 6;
   padding: 0 4 0 4;
   transition: 150ms;
-  border: 2px solid #24283b;
+  border: 2px solid @surface_container;
 }
 #group-power:hover {
-  border: 2px solid #f7768e;
+  border: 2px solid @red;
   transition: 150ms;
 }
 
@@ -185,14 +164,14 @@ window#waybar {
   padding: 0 4 0 4;
 }
 #custom-power {
-  color: #f7768e;
+  color: @red;
 }
 #custom-reboot {
-  color: #e0af68;
+  color: @yellow;
 }
 #custom-logout {
-  color: #e0af68;
+  color: @yellow;
 }
 #custom-lock {
-  color: #9ece6a;
+  color: @green;
 }

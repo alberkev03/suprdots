@@ -130,8 +130,8 @@ export PATH="$PATH:/home/kevin/.local/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 ###### Custom Environment #####
 export EDITOR=nvim
 export VISUAL=nvim
+###### Commands #####
 pokemon-colorscripts -r --no-title
