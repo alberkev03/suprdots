@@ -2,24 +2,25 @@
   "layer": "top",
   "position": "top",
   "width": 1920,
-  "height": 44,
+  "height": 35,
+  "margin-top": 4,
   "modules-left": [
-    "clock",
-    "tray",
-    "group/audio",
-    "mpris"
+    "hyprland/workspaces",
   ],
   "modules-center": [
-    "hyprland/workspaces"
+    "mpris"
   ],
   "modules-right": [
+    "tray",
     "custom/clipboard",
     "custom/notifications",
+    "group/audio",
     "hyprland/language",
     "cpu",
     "memory",
     "bluetooth",
     "network",
+    "clock",
     "group/group-power"
   ],
   "hyprland/workspaces": {

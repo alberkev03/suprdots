@@ -1,59 +1,51 @@
 @import "./colors.css";
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrains Mono, sans-serif;
+    font-family: SF Pro Display, sans-serif;
     font-size: 17;
-    margin: 0;
+    margin: -1;
     padding: 0;
     box-shadow: inherit;
     text-shadow: inherit;
   }
 
 window#waybar {
-    background-color: @surface;
+  background-color: transparent;
 }
 
-
+.modules-left, .modules-center, .modules-right {
+  background-color: @surface;
+  border-radius: 99;
+  padding: 0 10;
+  margin: 1 6;
+}
 #workspaces {
-  background-color: @background;
+  background-color: transparent;
   border-radius: 20px;
-  padding: 0 4 0 4;
 }
 #workspaces button {
   background-color: transparent;
   color: @surface_bright;
-  margin: 4 10 4 10;
+  margin: 0 5;
   transition: ease-in-out 100ms;
 }
 #workspaces button:hover {
   color: @primary;
   background-color: transparent;
-  padding: 0 10 0 10;
   transition: ease-in-out 200ms;
 }
 #workspaces button.active {
-  color: transparent;
-  background: linear-gradient(45deg, @primary 0%, @secondary 100%);
-  padding: 0 20px 0 20px;
-  margin: 4 0 4 0;
+  color: @primary;
   border-radius: 20px;
   transition: ease-in-out 200ms;
 }
-#workspaces button.active:hover {
-  padding: 0 25 0 25;
-  transition: ease-in-out 200ms;
-}
-
 
 #clock {
   margin: 0 8 0 12;
   color: @on-surface;
 }
 #tray, #audio {
-  margin: 4;
-  border-radius: 6;
-  padding: 0 10 0 10; 
-  background-color: @surface_container;
+  padding: 0 10; 
   color: @primary;
 }
 #tray menu {
@@ -61,7 +53,6 @@ window#waybar {
   color: @primary;
 }
 #audio:hover {
-  border: 2px solid @primary;
   transition: 200ms;
 }
 #pulseaudio {
@@ -89,79 +80,52 @@ window#waybar {
   min-height: 16px;
   min-width: 80px;
   border-radius: 8;
-  background-color: @background;
+  background-color: @surface_container;
 }
 #pulseaudio-slider highlight {
   border-radius: 8;
   background: @primary;
 }
 #mpris {
-  background-color: @surface_container;
-  color: @white;
-  border: 2px solid @surface_container;
-  margin: 4;
-  border-radius: 6;
+  color: @on_surface;
   padding: 0 10 0 10;
   transition: 300ms;
 }
-#mpris.paused {
-  border: 2px solid @surface_container;
-  transition: 300ms;
-}
 #mpris:hover {
-  background-color: @primary;
   transition: 300ms;
-  color: @surface_container;
-  border: 2px solid @primary;
+  color: @primary;
 }
 
 #mpris.playing {
   color: @primary;
-  border: 2px solid @primary;
 }
 #mpris.playing:hover {
-  background-color: @primary;
-  transition: 300ms;
-  color: @surface_container;
-  border: 2px solid @primary;
+  color: @primary
 }
 
-#custom-notifications, #custom-clipboard {
-  background-color: @surface_container;
+#custom-notifications, #custom-clipboard, #language {
+  color: @on_surface;
+  padding: 0 8 0 11;
+  transition: 300ms;
+}
+#custom-notifications:hover, #custom-clipboard:hover, #language:hover {
   color: @primary;
-  margin: 4;
-  padding: 0 5 0 8;
-  border-radius: 6px;
-  transition: 300ms;
-  border: 2px solid @surface_container;
-}
-#custom-notifications:hover, #custom-clipboard:hover {
-  margin: 4;
-  border: 2px solid @primary;
   transition: 300ms;
 }
 
 
-#language, #cpu, #memory, #bluetooth, #network, #group-power {
-  margin: 4;
-  padding: 0 4 0 4;
+#cpu, #memory, #bluetooth, #network, #group-power {
+  padding: 0 8;
   color: @on-surface;
 }
 #group-power {
-  background-color: @surface_container;
-  border-radius: 6;
   padding: 0 4 0 4;
-  transition: 150ms;
-  border: 2px solid @surface_container;
-}
-#group-power:hover {
-  border: 2px solid @red;
   transition: 150ms;
 }
 
 #custom-power, #custom-reboot, #custom-logout, #custom-lock {
   margin: 4px;
-  padding: 0 4 0 4;
+padding: 0 4 0 4;
 }
 #custom-power {
   color: @red;
