@@ -115,6 +115,7 @@ alias checkExe="for pid in /proc/[0-9]*; do
         fi
     fi
 done"
+alias y="yazi"
 ###### Miscelanius config ####
 eval "$(zoxide init zsh)"
 eval $(thefuck --alias) 

@@ -3,15 +3,16 @@
   "position": "top",
   "width": 1920,
   "height": 35,
-  "margin-top": 4,
+  //"margin-top": 4,
   "modules-left": [
     "hyprland/workspaces",
+    "tray"
   ],
   "modules-center": [
-    "mpris"
+    "mpris",
+    "cava"
   ],
   "modules-right": [
-    "tray",
     "custom/clipboard",
     "custom/notifications",
     "group/audio",
