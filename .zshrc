@@ -135,4 +135,4 @@ export PATH="$PATH:/home/kevin/.local/bin"
 export EDITOR=nvim
 export VISUAL=nvim
 ###### Commands #####
-pokemon-colorscripts -r --no-title
+fastfetch

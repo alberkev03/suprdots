@@ -2,33 +2,35 @@
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    center;
-    anchor:                      center;
+    location:                    south;
+    anchor:                      south;
     fullscreen:                  false;
-    width:                       1000px;
+    width:                       600px;
+    height:                      800px;
     x-offset:                    0px;
     y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
-    border-radius:               15px;
+    border-radius:               30px 30px 0px 0px;
     cursor:                      "default";
-    background-color:            @surface;
+    background-color:            @surface-bright;
 }
 mainbox {
     enabled:                     true;
     spacing:                     0px;
     background-color:            transparent;
-    orientation:                 horizontal;
-    children:                    [ "imagebox", "listbox" ];
-}
-
-imagebox {
-    padding:                     20px;
-    background-color:            transparent;
-    background-image:            url("~/.config/rofi/theme/launcher/img/img.png", height);
     orientation:                 vertical;
-    children:                    [ "inputbar", "dummy", "mode-switcher" ];
+    height:                      800px;
+    children:                    ["textbox-custom","inputbar","listbox"];
+}
+textbox-custom {
+  expand: false;
+  content: "";
+  font: "Google Sans Flex 3";
+  margin: 20 280 10 280;
+  border-radius: 20;
+  background-color: #ffffff66;
 }
 listbox {
     spacing:                     20px;
@@ -37,45 +39,49 @@ listbox {
     orientation:                 vertical;
     children:                    [ "message", "listview" ];
 }
-dummy {
-    background-color:            transparent;
-}
 /*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
+    margin:                      10px 40px;
     spacing:                     10px;
-    padding:                     15px;
-    border-radius:               10px;
-    background-color:            @primary;
-    text-color:                  @on-primary;
-    children:                    [ "textbox-prompt-colon", "entry" ];
+    padding:                     10px 15px;
+    border-radius:               30px;
+    background-color:            @surface;
+    text-color:                  @on-surface;
+    children:                    ["textbox-prompt-colon", "entry" ];
 }
+
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
-    background-color:            inherit;
-    text-color:                  inherit;
+    str:                         "";
+    font:                        "Google Sans Flex 20";
+    vertical-align: 0.5;
+	  horizontal-align: 0.5;
+    background-color:            transparent;
+    text-color:                  @primary;
+    margin: 0 4;
 }
 entry {
     enabled:                     true;
-    background-color:            inherit;
-    text-color:                  inherit;
+    background-color:            transparent;
+    text-color:                  @on-surface;
     cursor:                      text;
-    placeholder:                 "Search";
-    placeholder-color:           inherit;
+    placeholder:                 "Buscar";
+    placeholder-color:           @on-surface;
+    vertical-align: 0.5;
 }
 /*****----- Mode Switcher -----*****/
 mode-switcher{
     enabled:                     true;
-    spacing:                     20px;
     background-color:            transparent;
     text-color:                  @on-primary;
 }
 button {
     padding:                     15px;
     border-radius:               10px;
-    background-color:            @surface-container;
+    margin: 10px;
+    background-color:            @surface;
     text-color:                  @on-surface;
     cursor:                      pointer;
 }
@@ -86,7 +92,7 @@ button selected {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     1;
+    columns:                     4;
     lines:                       8;
     cycle:                       true;
     dynamic:                     true;
@@ -110,6 +116,7 @@ element {
     background-color:            transparent;
     text-color:                  @on-surface;
     cursor:                      pointer;
+    orientation:                 vertical;
 }
 element normal.normal {
     background-color:            inherit;
@@ -124,8 +131,8 @@ element normal.active {
     text-color:                  @on-tertiary;
 }
 element selected.normal {
-    background-color:            @primary;
-    text-color:                  @on-primary;
+    background-color:            @surface;
+    text-color:                  @primary;
 }
 element selected.urgent {
     background-color:            @error;
@@ -145,8 +152,8 @@ element-text {
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0.0;
+    horizontal-align:            0.5;
+    font:                        "Google Sans Flex 11";
 }
 
 /*****----- Message -----*****/

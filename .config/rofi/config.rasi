@@ -1,6 +1,6 @@
 configuration {
 modes: "window,drun,run,ssh";
-font: "JetBrains Mono 14";
+font: "Google Sans 14";
 show-icons: true;
 icon-theme: "Papirus";
 click-to-exit: true;

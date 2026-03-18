@@ -10,7 +10,7 @@
   "cssPriority": "user",
   "control-center-margin-top": 8,
   "control-center-margin-bottom": 8,
-  "control-center-margin-right": 8,
+  "control-center-margin-right": 0,
   "control-center-margin-left": 0,
   "notification-2fa-action": true,
   "notification-inline-replies": false,
@@ -50,12 +50,7 @@
       "app-name": "Spotify"
     }
   },
-  "widgets": [
-    "inhibitors",
-    "title",
-    "dnd",
-    "notifications"
-  ],
+  "widgets": ["inhibitors", "title", "dnd", "notifications"],
   "widget-config": {
     "notifications": {
       "vexpand": true

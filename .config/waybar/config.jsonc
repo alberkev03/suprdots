@@ -4,25 +4,19 @@
   "width": 1920,
   "height": 35,
   //"margin-top": 4,
-  "modules-left": [
-    "hyprland/workspaces",
-    "tray"
-  ],
-  "modules-center": [
-    "mpris",
-    "cava"
-  ],
+  "modules-left": ["hyprland/workspaces", "tray"],
+  "modules-center": ["mpris"],
   "modules-right": [
+    "group/audio",
     "custom/clipboard",
     "custom/notifications",
-    "group/audio",
     "hyprland/language",
     "cpu",
     "memory",
     "bluetooth",
     "network",
     "clock",
-    "group/group-power"
+    "group/group-power",
   ],
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -30,8 +24,8 @@
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "format-icons": {
       "default": "",
-      "active": ""
-    }
+      "active": "",
+    },
   },
   "clock": {
     "format": "{:%H:%M}",
@@ -43,37 +37,31 @@
       "transition-left-to-right": true,
     },
     "orientation": "inherit",
-    "modules": [
-      "pulseaudio",
-      "pulseaudio/slider"
-    ]
+    "modules": ["pulseaudio", "pulseaudio/slider"],
   },
   "pulseaudio": {
     "format": "{icon}",
     "format-muted": "",
     "format-icons": {
-      "default": [
-        "",
-        ""
-      ]
+      "default": ["", ""],
     },
     "scroll-step": 0,
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
   },
   "bluetooth": {
     // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
     "format": "",
     "format-disabled": "󰂲", // an empty format will hide the module
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
   },
   "cpu": {
     "format": " {usage}%",
-    "tooltip": false
+    "tooltip": false,
   },
   "memory": {
     "format": " {percentage}%",
-    "tooltip": false
+    "tooltip": false,
   },
   "network": {
     "format": "{icon}",
@@ -81,14 +69,14 @@
     "format-icons": {
       "ethernet": "󰒢",
       "wifi": "",
-      "disabled": "󰂭"
+      "disabled": "󰂭",
     },
   },
   "group/group-power": {
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 500,
-      "transition-left-to-right": false
+      "transition-left-to-right": false,
     },
     "modules": [
       "custom/power",
@@ -100,26 +88,26 @@
   "custom/power": {
     "format": "",
     "on-click": "systemctl poweroff",
-    "tooltip": "false"
+    "tooltip": "false",
   },
   "custom/reboot": {
     "format": "",
     "on-click": "systemctl reboot",
-    "tooltip": "false"
+    "tooltip": "false",
   },
   "custom/lock": {
     "format": "",
     "on-click": "hyprlock",
-    "tooltip": "false"
+    "tooltip": "false",
   },
   "custom/logout": {
     "format": "󰗽",
     "on-click": "killall -u kevin",
-    "tooltip": "false"
+    "tooltip": "false",
   },
   "hyprland/language": {
     "format": " {shortDescription}",
-    "on-click": " hyprctl switchxkblayout current next"
+    "on-click": " hyprctl switchxkblayout current next",
   },
   "mpris": {
     "enable-tooltip-len-limits": true,
@@ -133,19 +121,19 @@
     ],*/
     "player-icons": {
       "default": "󰐊",
-      "spotify": "󰓇"
+      "spotify": "󰓇",
     },
     "status-icons": {
       "paused": "󰐊",
       "playing": "󰏤 ",
-      "stopped": ""
+      "stopped": "",
     },
-    "tooltip": false
+    "tooltip": false,
   },
   "custom/clipboard": {
     "tooltip": false,
     "format": " ",
-    "on-click": "cliphist list | rofi -dmenu -theme ~/.config/rofi/theme/clipboard/clipboard.rasi | cliphist decode | wl-copy"
+    "on-click": "cliphist list | rofi -dmenu -theme ~/.config/rofi/theme/clipboard/clipboard.rasi | cliphist decode | wl-copy",
   },
   "custom/notifications": {
     "tooltip": false,
@@ -158,13 +146,13 @@
       "inhibited-notification": "󰂛",
       "inhibited-none": "󰪑",
       "dnd-inhibited-notification": "󰂛",
-      "dnd-inhibited-none": "󰪑"
+      "dnd-inhibited-none": "󰪑",
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
-    "escape": true
+    "escape": true,
   },
 }

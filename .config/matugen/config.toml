@@ -1,0 +1,69 @@
+[config]
+reload_apps = true
+
+[config.wallpaper]
+command = "awww"
+arguments = [ "img", "-t", "outer", "--transition-duration", "1.5", "--transition-step", "255", "--transition-fps", "60", "-f", "Nearest",]
+set = true
+[templates.kitty]
+input_path = './templates/kitty.conf'
+output_path = '~/.config/kitty/matugen.conf'
+post_hook = 'kill -SIGUSR1 $(pgrep kitty)' 
+[templates.hyprland]
+input_path = './templates/hyprland.conf'
+output_path = '~/.config/hypr/colors.conf'
+[templates.yazi]
+input_path = './templates/yazi.toml'
+output_path = '~/.config/yazi/flavors/matugen.yazi/flavor.toml'
+[templates.waybar]
+input_path = './templates/waybar.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+[templates.cava]
+input_path = './templates/cava.ini'
+output_path = '~/.config/cava/config'
+post_hook = 'pkill -USR1 cava'
+[templates.gtk3]
+input_path = './templates/gtk.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+[templates.gtk4]
+input_path = './templates/gtk.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+[templates.rofi]
+input_path = './templates/rofi.rasi'
+output_path = '~/.config/rofi/theme/colors/matugen.rasi'
+[templates.swaync]
+input_path = './templates/swaync.css'
+output_path = '~/.config/swaync/colors.css'
+post_hook = 'swaync-client -rs'
+[templates.Obsidian]
+input_path = './templates/obsidian.css'
+output_path = '~/Documentos/Notas/.obsidian/snippets/style.css'
+[config.custom_colors.red]
+color = "#FF0000"
+blend = true
+
+[config.custom_colors.green]
+color = "#00FF00"
+blend = true
+
+[config.custom_colors.yellow]
+color = "#FFFF00"
+blend = true
+
+[config.custom_colors.blue]
+color = "#0000FF"
+blend = true
+
+[config.custom_colors.magenta]
+color = "#FF00FF"
+blend = true
+
+[config.custom_colors.cyan]
+color = "#00FFFF"
+blend = true
+
+[config.custom_colors.white]
+color = "#FFFFFF"
+blend = true

@@ -1,23 +1,33 @@
 @import "./colors.css";
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Jetbrains Mono, sans-serif;
-    font-size: 17;
-    margin: -1;
-    padding: 0;
-    box-shadow: inherit;
-    text-shadow: inherit;
-  }
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family:
+    Google Sans Flex,
+    sans-serif;
+  font-weight: 400;
+  font-size: 17;
+  margin: -1;
+  padding: 0;
+  box-shadow: inherit;
+}
 
 window#waybar {
-  background-color: transparent
+  background-color: transparent;
 }
-.modules-left, .modules-center, .modules-right {
-  margin: 4;
-  padding: 4 10;
-  background: @surface;
-  border-radius: 10;
-  border: 2px solid @primary;
+.modules-left,
+.modules-center,
+.modules-right {
+  padding: 0 10;
+  margin: 10 10 1 10;
+}
+.modules-left {
+  border-radius: 20px;
+  background-color: @background;
+}
+.modules-right {
+  background-color: @surface;
+  border-radius: 20px;
+  padding: 4 3 4 3;
 }
 #workspaces {
   background-color: transparent;
@@ -41,11 +51,13 @@ window#waybar {
 }
 
 #clock {
-  margin: 0 8 0 12;
+  margin: 0 15 0 12;
   color: @on-surface;
 }
-#tray, #audio {
-  padding: 0 10; 
+#tray,
+#audio {
+  padding: 0 10;
+  margin: 1;
   color: @primary;
 }
 #tray menu {
@@ -54,10 +66,12 @@ window#waybar {
 }
 #audio:hover {
   transition: 200ms;
+  background-color: @surface_container;
+  border-radius: 15px;
 }
 #pulseaudio {
   margin: 0 5 0 4;
-  color: @secondary; 
+  color: @on_surface;
   transition: 300ms;
 }
 #pulseaudio:hover {
@@ -70,63 +84,83 @@ window#waybar {
   border: 0px;
 }
 #pulseaudio-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-    background-color: transparent;
-    border: 0px;
-    box-shadow: none;
+  min-height: 0px;
+  min-width: 0px;
+  background-color: transparent;
+  border: 0px;
+  box-shadow: none;
 }
 #pulseaudio-slider trough {
   min-height: 16px;
   min-width: 80px;
   border-radius: 8;
-  background-color: @surface_container;
+  background-color: @surface;
 }
 #pulseaudio-slider highlight {
   border-radius: 8;
   background: @primary;
 }
 #mpris {
+  background-color: @surface;
   color: @on_surface;
-  padding: 0 10 0 10;
+  padding: 0 15;
   transition: 300ms;
+  border-radius: 20;
+  margin: 1;
 }
 #mpris:hover {
   transition: 300ms;
-  color: @primary;
+  color: @on_surface;
+  background-color: @surface_container;
+  padding: 0 20;
 }
 
 #mpris.playing {
-  color: @primary;
+  color: @on_primary;
+  background-color: @primary;
 }
 #mpris.playing:hover {
-  color: @primary
+  color: @on_primary;
 }
 
-#custom-notifications, #custom-clipboard, #language {
+#custom-notifications,
+#custom-clipboard,
+#language {
   color: @on_surface;
   padding: 0 8 0 11;
   transition: 300ms;
 }
-#custom-notifications:hover, #custom-clipboard:hover, #language:hover {
+#custom-notifications:hover,
+#custom-clipboard:hover,
+#language:hover {
   color: @primary;
   transition: 300ms;
 }
 
-
-#cpu, #memory, #bluetooth, #network, #group-power {
+#cpu,
+#memory,
+#bluetooth,
+#network,
+#group-power {
   padding: 0 8;
   color: @on-surface;
 }
 #group-power {
   padding: 0 4 0 4;
+  margin: 0;
   transition: 150ms;
+  background-color: @primary_container;
+  border-radius: 25px;
 }
 
-#custom-power, #custom-reboot, #custom-logout, #custom-lock {
-  margin: 4px;
-padding: 0 4 0 4;
+#custom-power,
+#custom-reboot,
+#custom-logout,
+#custom-lock {
+  margin: 6px;
+  padding: 0 4 0 4;
 }
+
 #custom-power {
   color: @red;
 }
