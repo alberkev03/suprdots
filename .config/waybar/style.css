@@ -20,9 +20,6 @@ window#waybar {
   padding: 0 10;
   margin: 10 10 1 10;
 }
-.modules-left {
-  padding: 0;
-}
 .modules-right {
   background-color: @surface;
   border-radius: 20px;
@@ -116,19 +113,20 @@ window#waybar {
   color: @on_surface;
   padding: 0 15;
   transition: 300ms;
-  border-radius: 20;
+  border-radius: 10;
   margin: 1;
 }
 #mpris:hover {
   transition: 300ms;
   color: @on_surface;
   background-color: @surface_container;
-  padding: 0 20;
+  border-radius: 20;
 }
 
 #mpris.playing {
   color: @on_primary;
   background-color: @primary;
+  border-radius: 20;
 }
 #mpris.playing:hover {
   color: @on_primary;
