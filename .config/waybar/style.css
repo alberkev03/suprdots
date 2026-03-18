@@ -21,8 +21,7 @@ window#waybar {
   margin: 10 10 1 10;
 }
 .modules-left {
-  border-radius: 20px;
-  background-color: @background;
+  padding: 0;
 }
 .modules-right {
   background-color: @surface;
@@ -30,23 +29,35 @@ window#waybar {
   padding: 4 3 4 3;
 }
 #workspaces {
-  background-color: transparent;
+  background-color: @surface;
   border-radius: 20px;
+  padding: 5 3;
+  margin: 1;
 }
 #workspaces button {
-  background-color: transparent;
-  color: @surface_bright;
-  margin: 0 5;
+  background-color: @surface_container;
+  color: @surface_tint;
+  margin: 2;
+  padding: 0 10;
+  border-radius: 6;
   transition: ease-in-out 100ms;
 }
-#workspaces button:hover {
-  color: @primary;
-  background-color: transparent;
+#workspaces > button:last-child {
+  border-radius: 6 20 20 6;
+}
+#workspaces > button:first-child {
+  border-radius: 20 6 6 20;
+}
+#workspaces button:hover,
+#workspaces button.active:hover {
+  padding: 0 15;
   transition: ease-in-out 200ms;
 }
 #workspaces button.active {
-  color: @primary;
-  border-radius: 20px;
+  background-color: @primary;
+  color: @surface;
+  border-radius: 20;
+  padding: 0 12;
   transition: ease-in-out 200ms;
 }
 

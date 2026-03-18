@@ -19,7 +19,7 @@
     "group/group-power",
   ],
   "hyprland/workspaces": {
-    "format": "{icon}",
+    "format": "{name}",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "format-icons": {
@@ -30,6 +30,7 @@
   "clock": {
     "format": "{:%H:%M}",
     "format-alt": "{:%d/%m/%Y}",
+    "tooltip": false,
   },
   "group/audio": {
     "drawer": {
@@ -41,7 +42,7 @@
   },
   "pulseaudio": {
     "format": "{icon}",
-    "format-muted": "",
+    "format-muted": "",
     "format-icons": {
       "default": ["", ""],
     },
@@ -60,7 +61,7 @@
     "tooltip": false,
   },
   "memory": {
-    "format": " {percentage}%",
+    "format": "󰘚 {percentage}%",
     "tooltip": false,
   },
   "network": {
@@ -106,7 +107,7 @@
     "tooltip": "false",
   },
   "hyprland/language": {
-    "format": " {shortDescription}",
+    "format": "  {shortDescription}",
     "on-click": " hyprctl switchxkblayout current next",
   },
   "mpris": {
