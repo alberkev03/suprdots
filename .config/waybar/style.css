@@ -28,13 +28,13 @@ window#waybar {
 #workspaces {
   background-color: @surface;
   border-radius: 20px;
-  padding: 5 3;
+  padding: 3;
   margin: 1;
 }
 #workspaces button {
   background-color: @surface_container;
   color: @surface_tint;
-  margin: 2;
+  margin: 2 1;
   padding: 0 10;
   border-radius: 6;
   transition: ease-in-out 100ms;
@@ -47,15 +47,19 @@ window#waybar {
 }
 #workspaces button:hover,
 #workspaces button.active:hover {
-  padding: 0 15;
   transition: ease-in-out 200ms;
+  border-radius: 20;
 }
 #workspaces button.active {
   background-color: @primary;
   color: @surface;
   border-radius: 20;
-  padding: 0 12;
+  padding: 0 15;
   transition: ease-in-out 200ms;
+}
+#workspaces button.active:hover {
+  background-color: @primary_fixed;
+  color: @on_primary_fixed;
 }
 
 #clock {
@@ -120,7 +124,6 @@ window#waybar {
   transition: 300ms;
   color: @on_surface;
   background-color: @surface_container;
-  border-radius: 20;
 }
 
 #mpris.playing {
@@ -129,7 +132,8 @@ window#waybar {
   border-radius: 20;
 }
 #mpris.playing:hover {
-  color: @on_primary;
+  color: @on_primary_fixed;
+  background-color: @primary_fixed;
 }
 
 #custom-notifications,
@@ -137,13 +141,13 @@ window#waybar {
 #language {
   color: @on_surface;
   padding: 0 8 0 11;
-  transition: 300ms;
+  transition: 200ms;
 }
 #custom-notifications:hover,
 #custom-clipboard:hover,
 #language:hover {
   color: @primary;
-  transition: 300ms;
+  transition: 200ms;
 }
 
 #cpu,
@@ -158,10 +162,15 @@ window#waybar {
   padding: 0 4 0 4;
   margin: 0;
   transition: 150ms;
-  background-color: @primary_container;
+  background-color: @surface_container;
+  color: @on_surface_container;
   border-radius: 25px;
 }
-
+#group-power:hover {
+  background-color: @primary_container;
+  color: @on_primary_container;
+  transition: 200ms;
+}
 #custom-power,
 #custom-reboot,
 #custom-logout,
@@ -170,15 +179,19 @@ window#waybar {
   padding: 0 4 0 4;
 }
 
-#custom-power {
+#custom-power:hover {
+  transition: 200ms;
   color: @red;
 }
-#custom-reboot {
+#custom-reboot:hover {
+  transition: 200ms;
   color: @yellow;
 }
-#custom-logout {
+#custom-logout:hover {
+  transition: 200ms;
   color: @yellow;
 }
-#custom-lock {
+#custom-lock:hover {
+  transition: 200ms;
   color: @green;
 }

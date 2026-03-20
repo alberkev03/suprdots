@@ -3,12 +3,24 @@ reload_apps = true
 
 [config.wallpaper]
 command = "awww"
-arguments = [ "img", "-t", "outer", "--transition-duration", "1.5", "--transition-step", "255", "--transition-fps", "60", "-f", "Nearest",]
+arguments = [
+  "img",
+  "-t",
+  "outer",
+  "--transition-duration",
+  "1.5",
+  "--transition-step",
+  "255",
+  "--transition-fps",
+  "60",
+  "-f",
+  "Nearest",
+]
 set = true
 [templates.kitty]
 input_path = './templates/kitty.conf'
 output_path = '~/.config/kitty/matugen.conf'
-post_hook = 'kill -SIGUSR1 $(pgrep kitty)' 
+post_hook = 'kill -SIGUSR1 $(pgrep kitty)'
 [templates.hyprland]
 input_path = './templates/hyprland.conf'
 output_path = '~/.config/hypr/colors.conf'
@@ -40,6 +52,9 @@ post_hook = 'swaync-client -rs'
 [templates.Obsidian]
 input_path = './templates/obsidian.css'
 output_path = '~/Documentos/Notas/.obsidian/snippets/style.css'
+[templates.folder]
+input_path = '~/.config/matugen/templates/folder-color.txt'
+output_path = '~/.config/matugen/papirus-folders/folder-color.txt'
 [config.custom_colors.red]
 color = "#FF0000"
 blend = true

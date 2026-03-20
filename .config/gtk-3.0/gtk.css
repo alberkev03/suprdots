@@ -35,7 +35,6 @@ windowcontrols.end:not(.colored):not(.macos):not(.default)
   > image {
   color: @red_1;
 }
-
 /* adw-gtk3 Colorizer Extension Start */
 @define-color accent_bg_color #3584e4;
 @define-color accent_color @accent_bg_color;

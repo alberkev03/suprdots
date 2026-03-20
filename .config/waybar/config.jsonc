@@ -114,20 +114,12 @@
     "enable-tooltip-len-limits": true,
     "title-len": 20,
     "album-len": 10,
-    "format": "{player_icon} {title} - {album} {status_icon}",
-    "format-paused": "{player_icon} {title} - {album} {status_icon} ",
+    "format": "{player_icon} {title} - {album}",
+    "format-paused": "{player_icon} {title} - {album}",
     "format-stopped": "{stopped_icon} Sin reproducción.",
-    /*"ignored-players": [
-      "brave"
-    ],*/
     "player-icons": {
-      "default": "󰐊",
-      "spotify": "󰓇",
-    },
-    "status-icons": {
-      "paused": "󰐊",
-      "playing": "󰏤 ",
-      "stopped": "",
+      "default": "󰐊 ",
+      "spotify": "󰓇 ",
     },
     "tooltip": false,
   },
