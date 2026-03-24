@@ -7,9 +7,9 @@
   "modules-left": ["hyprland/workspaces", "tray"],
   "modules-center": ["mpris"],
   "modules-right": [
-    "group/audio",
-    "custom/clipboard",
     "custom/notifications",
+    "custom/clipboard",
+    "group/audio",
     "hyprland/language",
     "cpu",
     "memory",
@@ -51,24 +51,24 @@
   },
   "bluetooth": {
     // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-    "format": "",
+    "format": "",
     "format-disabled": "󰂲", // an empty format will hide the module
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
   },
   "cpu": {
-    "format": " {usage}%",
+    "format": "  {usage}%",
     "tooltip": false,
   },
   "memory": {
-    "format": "󰘚 {percentage}%",
+    "format": "󰘚  {percentage}%",
     "tooltip": false,
   },
   "network": {
     "format": "{icon}",
     "toltip": false,
     "format-icons": {
-      "ethernet": "󰒢",
+      "ethernet": "󰈀",
       "wifi": "",
       "disabled": "󰂭",
     },
@@ -107,7 +107,7 @@
     "tooltip": "false",
   },
   "hyprland/language": {
-    "format": "  {shortDescription}",
+    "format": "  {shortDescription}",
     "on-click": " hyprctl switchxkblayout current next",
   },
   "mpris": {
@@ -119,23 +119,24 @@
     "format-stopped": "{stopped_icon} Sin reproducción.",
     "player-icons": {
       "default": "󰐊 ",
+      "chrome": " ",
       "spotify": "󰓇 ",
     },
     "tooltip": false,
   },
   "custom/clipboard": {
     "tooltip": false,
-    "format": " ",
+    "format": "󱉧",
     "on-click": "cliphist list | rofi -dmenu -theme ~/.config/rofi/theme/clipboard/clipboard.rasi | cliphist decode | wl-copy",
   },
   "custom/notifications": {
     "tooltip": false,
-    "format": "{icon} ",
+    "format": "{icon}",
     "format-icons": {
       "notification": "󱅫",
-      "none": "󰂜",
-      "dnd-notification": "󰂠",
-      "dnd-none": "󰪓",
+      "none": "",
+      "dnd-notification": "󱅫",
+      "dnd-none": "󱏧",
       "inhibited-notification": "󰂛",
       "inhibited-none": "󰪑",
       "dnd-inhibited-notification": "󰂛",

@@ -5,8 +5,8 @@
 ## Requisites
 
 - GNU Stow. This software is the main protagonist of my dotfiles. It creates symlinks for every single dotfile that I have. This have two benefits:
-    1. It helps organizing my dotfiles into a single folder that I can move to every PC I want.
-    2. It also works as a easy way to backup my dotfiles.
+  1. It helps organizing my dotfiles into a single folder that I can move to every PC I want.
+  2. It also works as a easy way to backup my dotfiles.
 - Git.
 
 The software that uses the dotfiles inside this repo are:
@@ -40,3 +40,10 @@ stow .
 > ### IMPORTANT
 >
 > Make sure the original dotfiles -if any- are **REMOVED** before activating. If not, it will promt errors.
+
+## To-Do
+
+- Power Menu
+- Theming Menu
+- Dark/Light mode toggle
+- Better Wallpaper selector

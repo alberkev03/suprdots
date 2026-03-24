@@ -54,13 +54,13 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
+    str:                         " ";
     font:                        "Google Sans Flex 20";
     vertical-align: 0.5;
 	  horizontal-align: 0.5;
     background-color:            transparent;
     text-color:                  @primary;
-    margin: 0 4;
+    margin: 0;
 }
 entry {
     enabled:                     true;

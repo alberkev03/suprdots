@@ -1,11 +1,9 @@
 @import "./colors.css";
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family:
-    Google Sans Flex,
-    sans-serif;
+  font-family: "Google Sans Flex", "JetBrainsMono Nerd Font Propo";
   font-weight: 400;
-  font-size: 17;
+  font-size: 16;
   margin: -1;
   padding: 0;
   box-shadow: inherit;
@@ -50,6 +48,9 @@ window#waybar {
   transition: ease-in-out 200ms;
   border-radius: 20;
 }
+#workspaces button:hover {
+  background-color: @surface_container;
+}
 #workspaces button.active {
   background-color: @primary;
   color: @surface;
@@ -64,17 +65,35 @@ window#waybar {
 
 #clock {
   margin: 0 15 0 12;
-  color: @on-surface;
+  color: @on_surface;
 }
 #tray,
 #audio {
-  padding: 0 10;
+  padding: 0 8 0 10;
   margin: 1;
   color: @primary;
 }
-#tray menu {
-  background-color: @background;
+#tray {
+  background-color: @surface;
+  border-radius: 20px;
+  margin: 3 10;
+  padding: 0 15;
+}
+#tray image {
   color: @primary;
+}
+#tray menu {
+  background-color: @surface;
+  color: @on_surface;
+  padding: 5;
+}
+#tray menu > *:not(separator) {
+  padding: 5 0;
+}
+#tray menu > *:hover:not(separator) {
+  background-color: @surface_container;
+  color: @on_surface_container;
+  transition: 200ms;
 }
 #audio:hover {
   transition: 200ms;
@@ -82,7 +101,6 @@ window#waybar {
   border-radius: 15px;
 }
 #pulseaudio {
-  margin: 0 5 0 4;
   color: @on_surface;
   transition: 300ms;
 }
@@ -91,15 +109,16 @@ window#waybar {
   transition: 300ms;
 }
 #pulseaudio-slider {
-  margin: 0 4 0 10;
+  margin: 0 4 0 15;
   padding: 0;
-  border: 0px;
+  border: 0px transparent;
 }
 #pulseaudio-slider slider {
   min-height: 0px;
   min-width: 0px;
   background-color: transparent;
-  border: 0px;
+  color: transparent;
+  border: 0px transparent;
   box-shadow: none;
 }
 #pulseaudio-slider trough {
@@ -107,6 +126,8 @@ window#waybar {
   min-width: 80px;
   border-radius: 8;
   background-color: @surface;
+  border: 0px solid transparent;
+  color: transparent;
 }
 #pulseaudio-slider highlight {
   border-radius: 8;
@@ -140,7 +161,7 @@ window#waybar {
 #custom-clipboard,
 #language {
   color: @on_surface;
-  padding: 0 8 0 11;
+  padding: 0 11;
   transition: 200ms;
 }
 #custom-notifications:hover,
@@ -156,19 +177,19 @@ window#waybar {
 #network,
 #group-power {
   padding: 0 8;
-  color: @on-surface;
+  color: @on_surface;
 }
 #group-power {
   padding: 0 4 0 4;
   margin: 0;
   transition: 150ms;
   background-color: @surface_container;
-  color: @on_surface_container;
+  color: @on_surface;
   border-radius: 25px;
 }
 #group-power:hover {
   background-color: @primary_container;
-  color: @on_primary_container;
+  color: @on_surface;
   transition: 200ms;
 }
 #custom-power,
