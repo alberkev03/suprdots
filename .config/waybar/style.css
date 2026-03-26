@@ -1,7 +1,7 @@
 @import "./colors.css";
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: "Google Sans Flex", "JetBrainsMono Nerd Font Propo";
+  font-family: "Google Sans Flex", "Symbols Nerd Font Propo";
   font-weight: 400;
   font-size: 16;
   margin: -1;
@@ -64,13 +64,21 @@ window#waybar {
 }
 
 #clock {
-  margin: 0 15 0 12;
   color: @on_surface;
+  background-color: @surface;
+  padding: 0 15;
+  margin: 1 10;
+  border-radius: 20;
+  transition: 200ms;
+}
+#clock:hover {
+  border-radius: 6;
+  transition: 200ms;
 }
 #tray,
 #audio {
   padding: 0 8 0 10;
-  margin: 1;
+  margin: 0;
   color: @primary;
 }
 #tray {
@@ -103,6 +111,8 @@ window#waybar {
 #pulseaudio {
   color: @on_surface;
   transition: 300ms;
+  font-size: 20;
+  margin: 0 3;
 }
 #pulseaudio:hover {
   color: @primary;
@@ -161,8 +171,11 @@ window#waybar {
 #custom-clipboard,
 #language {
   color: @on_surface;
-  padding: 0 11;
+  margin: 0 10;
   transition: 200ms;
+}
+#custom-notifications {
+  margin: 0 10 0 15;
 }
 #custom-notifications:hover,
 #custom-clipboard:hover,
@@ -176,21 +189,36 @@ window#waybar {
 #bluetooth,
 #network,
 #group-power {
-  padding: 0 8;
+  margin: 0 10;
   color: @on_surface;
 }
+#cpu {
+  background-color: @surface_container;
+  margin: 0 0 0 5;
+  padding: 0 10;
+  border-radius: 20 0 0 20;
+}
+#memory {
+  background-color: @surface_container;
+  margin: 0 3 0 0;
+  padding: 0 10;
+  border-radius: 0 4 4 0;
+}
+
 #group-power {
-  padding: 0 4 0 4;
+  padding: 0 4 0 1;
   margin: 0;
   transition: 150ms;
   background-color: @surface_container;
   color: @on_surface;
-  border-radius: 25px;
+  border-radius: 6 20 20 6;
 }
 #group-power:hover {
   background-color: @primary_container;
   color: @on_surface;
   transition: 200ms;
+  border-radius: 20;
+  padding: 0 4;
 }
 #custom-power,
 #custom-reboot,

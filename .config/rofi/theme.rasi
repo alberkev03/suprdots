@@ -1,40 +1,35 @@
-@import "../colors/matugen.rasi"
+@import "./matugen.rasi"
+* {
+    font:                        "Rubik 13";
+  }
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    south;
-    anchor:                      south;
+    location:                    center;
+    anchor:                      center;
     fullscreen:                  false;
     width:                       600px;
-    height:                      800px;
+    height:                      400px;
     x-offset:                    0px;
     y-offset:                    0px;
-
     /* properties for all widgets */
     enabled:                     true;
-    border-radius:               30px 30px 0px 0px;
+    border-radius:               20px;
     cursor:                      "default";
-    background-color:            @surface-bright;
+    background-color:            @surface;
 }
 mainbox {
     enabled:                     true;
     spacing:                     0px;
     background-color:            transparent;
     orientation:                 vertical;
-    height:                      800px;
-    children:                    ["textbox-custom","inputbar","listbox"];
+    height:                      600px;
+    children:                    ["inputbar","listbox"];
 }
-textbox-custom {
-  expand: false;
-  content: "";
-  font: "Google Sans Flex 3";
-  margin: 20 280 10 280;
-  border-radius: 20;
-  background-color: #ffffff66;
-}
+
 listbox {
     spacing:                     20px;
-    padding:                     20px;
+    padding:                     10px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "message", "listview" ];
@@ -42,34 +37,22 @@ listbox {
 /*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
-    margin:                      10px 40px;
     spacing:                     10px;
-    padding:                     10px 15px;
-    border-radius:               30px;
-    background-color:            @surface;
+    margin:                      20px 20px 10px 20px;
+    border-radius:               10px;
+    padding:                     15px 20px;
+    background-color:            @surface-container;
     text-color:                  @on-surface;
-    children:                    ["textbox-prompt-colon", "entry" ];
+    children:                    ["entry" ];
 }
 
-textbox-prompt-colon {
-    enabled:                     true;
-    expand:                      false;
-    str:                         " ";
-    font:                        "Google Sans Flex 20";
-    vertical-align: 0.5;
-	  horizontal-align: 0.5;
-    background-color:            transparent;
-    text-color:                  @primary;
-    margin: 0;
-}
 entry {
     enabled:                     true;
     background-color:            transparent;
     text-color:                  @on-surface;
     cursor:                      text;
-    placeholder:                 "Buscar";
+    placeholder:                 "Search";
     placeholder-color:           @on-surface;
-    vertical-align: 0.5;
 }
 /*****----- Mode Switcher -----*****/
 mode-switcher{
@@ -80,7 +63,7 @@ mode-switcher{
 button {
     padding:                     15px;
     border-radius:               10px;
-    margin: 10px;
+    margin:                      10px;
     background-color:            @surface;
     text-color:                  @on-surface;
     cursor:                      pointer;
@@ -92,8 +75,6 @@ button selected {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     4;
-    lines:                       8;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -101,26 +82,22 @@ listview {
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-    
-    spacing:                     10px;
     background-color:            transparent;
     text-color:                  @on-surface;
     cursor:                      "default";
+    border-radius: 10px;
+    margin: 0 10px;
 }
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    spacing:                     15px;
-    padding:                     8px;
-    border-radius:               10px;
-    background-color:            transparent;
+    padding:                     10px 20px;
+    margin:                      2px 0px; 
+    border-radius:               5px;
+    background-color:            @surface-container;
     text-color:                  @on-surface;
     cursor:                      pointer;
-    orientation:                 vertical;
-}
-element normal.normal {
-    background-color:            inherit;
-    text-color:                  inherit;
+    orientation:                 horizontal;
 }
 element normal.urgent {
     background-color:            @error;
@@ -131,29 +108,30 @@ element normal.active {
     text-color:                  @on-tertiary;
 }
 element selected.normal {
-    background-color:            @surface;
-    text-color:                  @primary;
+    background-color:            @primary;
+    text-color:                  @on-primary;
+    border-radius:               40px;
 }
 element selected.urgent {
     background-color:            @error;
     text-color:                  @on-error;
+    border-radius:               40px;
 }
 element selected.active {
     background-color:            @primary;
     text-color:                  @on-secondary;
+    border-radius:               40px;
 }
 element-icon {
+    enabled:                     false;
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        32px;
     cursor:                      inherit;
 }
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
-    horizontal-align:            0.5;
-    font:                        "Google Sans Flex 11";
 }
 
 /*****----- Message -----*****/

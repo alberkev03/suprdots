@@ -5,17 +5,16 @@
   "height": 35,
   //"margin-top": 4,
   "modules-left": ["hyprland/workspaces", "tray"],
-  "modules-center": ["mpris"],
+  "modules-center": ["clock", "mpris"],
   "modules-right": [
     "custom/notifications",
     "custom/clipboard",
     "group/audio",
     "hyprland/language",
-    "cpu",
-    "memory",
     "bluetooth",
     "network",
-    "clock",
+    "cpu",
+    "memory",
     "group/group-power",
   ],
   "hyprland/workspaces": {
@@ -68,7 +67,7 @@
     "format": "{icon}",
     "toltip": false,
     "format-icons": {
-      "ethernet": "󰈀",
+      "ethernet": "",
       "wifi": "",
       "disabled": "󰂭",
     },
@@ -97,17 +96,17 @@
     "tooltip": "false",
   },
   "custom/lock": {
-    "format": "",
+    "format": "",
     "on-click": "hyprlock",
     "tooltip": "false",
   },
   "custom/logout": {
-    "format": "󰗽",
+    "format": "",
     "on-click": "killall -u kevin",
     "tooltip": "false",
   },
   "hyprland/language": {
-    "format": "  {shortDescription}",
+    "format": "󰌌  {shortDescription}",
     "on-click": " hyprctl switchxkblayout current next",
   },
   "mpris": {
@@ -124,17 +123,12 @@
     },
     "tooltip": false,
   },
-  "custom/clipboard": {
-    "tooltip": false,
-    "format": "󱉧",
-    "on-click": "cliphist list | rofi -dmenu -theme ~/.config/rofi/theme/clipboard/clipboard.rasi | cliphist decode | wl-copy",
-  },
   "custom/notifications": {
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
       "notification": "󱅫",
-      "none": "",
+      "none": "󰂚",
       "dnd-notification": "󱅫",
       "dnd-none": "󱏧",
       "inhibited-notification": "󰂛",
