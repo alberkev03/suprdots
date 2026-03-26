@@ -1,0 +1,154 @@
+@import "./matugen.rasi"
+* {
+    font:                        "Rubik 13";
+  }
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       600px;
+    height:                      400px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    /* properties for all widgets */
+    enabled:                     true;
+    border-radius:               20px;
+    cursor:                      "default";
+    background-color:            @surface;
+}
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    height:                      600px;
+    children:                    ["inputbar","listbox"];
+}
+
+listbox {
+    spacing:                     20px;
+    padding:                     10px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      20px 20px 10px 20px;
+    border-radius:               10px;
+    padding:                     15px 20px;
+    background-color:            @surface-container;
+    text-color:                  @on-surface;
+    children:                    ["entry" ];
+}
+
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  @on-surface;
+    cursor:                      text;
+    placeholder:                 "Clipboard...";
+    placeholder-color:           @on-surface;
+}
+/*****----- Mode Switcher -----*****/
+mode-switcher{
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  @on-primary;
+}
+button {
+    padding:                     15px;
+    border-radius:               10px;
+    margin:                      10px;
+    background-color:            @surface;
+    text-color:                  @on-surface;
+    cursor:                      pointer;
+}
+button selected {
+    background-color:            @primary;
+    text-color:                  @on-primary;
+}
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    background-color:            transparent;
+    text-color:                  @on-surface;
+    cursor:                      "default";
+    border-radius: 10px;
+    margin: 0 10px;
+}
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    padding:                     10px 20px;
+    margin:                      2px 0px; 
+    border-radius:               5px;
+    background-color:            @surface-container;
+    text-color:                  @on-surface;
+    cursor:                      pointer;
+    orientation:                 horizontal;
+}
+element normal.urgent {
+    background-color:            @error;
+    text-color:                  @on-error;
+}
+element normal.active {
+    background-color:            @tertiary;
+    text-color:                  @on-tertiary;
+}
+element selected.normal {
+    background-color:            @primary;
+    text-color:                  @on-primary;
+    border-radius:               40px;
+}
+element selected.urgent {
+    background-color:            @error;
+    text-color:                  @on-error;
+    border-radius:               40px;
+}
+element selected.active {
+    background-color:            @primary;
+    text-color:                  @on-secondary;
+    border-radius:               40px;
+}
+element-icon {
+    enabled:                     false;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+}
+
+/*****----- Message -----*****/
+message {
+    background-color:            transparent;
+}
+textbox {
+    padding:                     15px;
+    border-radius:               10px;
+    background-color:            @surface-container;
+    text-color:                  @on-surface;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+error-message {
+    padding:                     15px;
+    border-radius:               20px;
+    background-color:            @error;
+    text-color:                  @on-error;
+}
