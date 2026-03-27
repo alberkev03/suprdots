@@ -1,4 +1,7 @@
 @import "./colors.css";
+@import "./workspaces.css";
+@import "./audio.css";
+@import "./dashboard.css";
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: "Google Sans Flex", "Symbols Nerd Font Propo";
@@ -15,54 +18,14 @@ window#waybar {
 .modules-left,
 .modules-center,
 .modules-right {
-  padding: 0 10;
-  margin: 10 10 1 10;
+  padding: 0;
+  margin: 5 5 1 5;
 }
 .modules-right {
   background-color: @surface;
   border-radius: 20px;
   padding: 4 3 4 3;
 }
-#workspaces {
-  background-color: @surface;
-  border-radius: 20px;
-  padding: 3;
-  margin: 1;
-}
-#workspaces button {
-  background-color: @surface_container;
-  color: @surface_tint;
-  margin: 2 1;
-  padding: 0 10;
-  border-radius: 6;
-  transition: ease-in-out 100ms;
-}
-#workspaces > button:last-child {
-  border-radius: 6 20 20 6;
-}
-#workspaces > button:first-child {
-  border-radius: 20 6 6 20;
-}
-#workspaces button:hover,
-#workspaces button.active:hover {
-  transition: ease-in-out 200ms;
-  border-radius: 20;
-}
-#workspaces button:hover {
-  background-color: @surface_container;
-}
-#workspaces button.active {
-  background-color: @primary;
-  color: @surface;
-  border-radius: 20;
-  padding: 0 15;
-  transition: ease-in-out 200ms;
-}
-#workspaces button.active:hover {
-  background-color: @primary_fixed;
-  color: @on_primary_fixed;
-}
-
 #clock {
   color: @on_surface;
   background-color: @surface;
@@ -72,7 +35,7 @@ window#waybar {
   transition: 200ms;
 }
 #clock:hover {
-  border-radius: 6;
+  border-radius: 10;
   transition: 200ms;
 }
 #tray,
@@ -103,69 +66,6 @@ window#waybar {
   color: @on_surface_container;
   transition: 200ms;
 }
-#audio:hover {
-  transition: 200ms;
-  background-color: @surface_container;
-  border-radius: 15px;
-}
-#pulseaudio {
-  color: @on_surface;
-  transition: 300ms;
-  font-size: 20;
-  margin: 0 3;
-}
-#pulseaudio:hover {
-  color: @primary;
-  transition: 300ms;
-}
-#pulseaudio-slider {
-  margin: 0 4 0 15;
-  padding: 0;
-  border: 0px transparent;
-}
-#pulseaudio-slider slider {
-  min-height: 0px;
-  min-width: 0px;
-  background-color: transparent;
-  color: transparent;
-  border: 0px transparent;
-  box-shadow: none;
-}
-#pulseaudio-slider trough {
-  min-height: 16px;
-  min-width: 80px;
-  border-radius: 8;
-  background-color: @surface;
-  border: 0px solid transparent;
-  color: transparent;
-}
-#pulseaudio-slider highlight {
-  border-radius: 8;
-  background: @primary;
-}
-#mpris {
-  background-color: @surface;
-  color: @on_surface;
-  padding: 0 15;
-  transition: 300ms;
-  border-radius: 10;
-  margin: 1;
-}
-#mpris:hover {
-  transition: 300ms;
-  color: @on_surface;
-  background-color: @surface_container;
-}
-
-#mpris.playing {
-  color: @on_primary;
-  background-color: @primary;
-  border-radius: 20;
-}
-#mpris.playing:hover {
-  color: @on_primary_fixed;
-  background-color: @primary_fixed;
-}
 
 #custom-notifications,
 #custom-clipboard,
@@ -182,65 +82,4 @@ window#waybar {
 #language:hover {
   color: @primary;
   transition: 200ms;
-}
-
-#cpu,
-#memory,
-#bluetooth,
-#network,
-#group-power {
-  margin: 0 10;
-  color: @on_surface;
-}
-#cpu {
-  background-color: @surface_container;
-  margin: 0 0 0 5;
-  padding: 0 10;
-  border-radius: 20 0 0 20;
-}
-#memory {
-  background-color: @surface_container;
-  margin: 0 3 0 0;
-  padding: 0 10;
-  border-radius: 0 4 4 0;
-}
-
-#group-power {
-  padding: 0 4 0 1;
-  margin: 0;
-  transition: 150ms;
-  background-color: @surface_container;
-  color: @on_surface;
-  border-radius: 6 20 20 6;
-}
-#group-power:hover {
-  background-color: @primary_container;
-  color: @on_surface;
-  transition: 200ms;
-  border-radius: 20;
-  padding: 0 4;
-}
-#custom-power,
-#custom-reboot,
-#custom-logout,
-#custom-lock {
-  margin: 6px;
-  padding: 0 4 0 4;
-}
-
-#custom-power:hover {
-  transition: 200ms;
-  color: @red;
-}
-#custom-reboot:hover {
-  transition: 200ms;
-  color: @yellow;
-}
-#custom-logout:hover {
-  transition: 200ms;
-  color: @yellow;
-}
-#custom-lock:hover {
-  transition: 200ms;
-  color: @green;
 }

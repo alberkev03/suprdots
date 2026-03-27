@@ -8,8 +8,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       600px;
-    height:                      400px;
+    width:                       500px;
     x-offset:                    0px;
     y-offset:                    0px;
     /* properties for all widgets */
@@ -17,8 +16,6 @@ window {
     border-radius:               20px;
     cursor:                      "default";
     background-color:            @surface;
-    border:                      2px;
-    border-color:                @primary;
 }
 mainbox {
     enabled:                     true;
@@ -53,7 +50,7 @@ entry {
     background-color:            transparent;
     text-color:                  @on-surface;
     cursor:                      text;
-    placeholder:                 "Clipboard...";
+    placeholder:                 "Search";
     placeholder-color:           @on-surface;
 }
 /*****----- Mode Switcher -----*****/
@@ -80,26 +77,24 @@ listview {
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
-    layout:                      vertical;
+    layout:                      horizontal;
     reverse:                     false;
-    fixed-height:                true;
     fixed-columns:               true;
     background-color:            transparent;
     text-color:                  @on-surface;
     cursor:                      "default";
-    border-radius: 10px;
     margin: 0 10px;
 }
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    padding:                     10px 20px;
-    margin:                      2px 0px; 
+    padding:                     50px 30px;
+    margin:                      2px; 
     border-radius:               5px;
     background-color:            @surface-container;
     text-color:                  @on-surface;
     cursor:                      pointer;
-    orientation:                 horizontal;
+    orientation:                 vertical;
 }
 element normal.urgent {
     background-color:            @error;

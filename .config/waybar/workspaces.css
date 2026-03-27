@@ -1,0 +1,39 @@
+#workspaces {
+  background-color: @surface;
+  border-radius: 20px;
+  padding: 3;
+  margin: 1;
+}
+#workspaces button {
+  background-color: @surface_container;
+  color: @surface_tint;
+  margin: 2 1;
+  padding: 0 10;
+  border-radius: 6;
+  transition: ease-in-out 100ms;
+}
+#workspaces > button:last-child {
+  border-radius: 6 20 20 6;
+}
+#workspaces > button:first-child {
+  border-radius: 20 6 6 20;
+}
+#workspaces button:hover,
+#workspaces button.active:hover {
+  transition: ease-in-out 200ms;
+  border-radius: 20;
+}
+#workspaces button:hover {
+  background-color: @surface_container;
+}
+#workspaces button.active {
+  background-color: @primary;
+  color: @surface;
+  border-radius: 20;
+  padding: 0 15;
+  transition: ease-in-out 200ms;
+}
+#workspaces button.active:hover {
+  background-color: @primary_fixed;
+  color: @on_primary_fixed;
+}
