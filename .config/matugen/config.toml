@@ -52,6 +52,9 @@ post_hook = 'swaync-client -rs'
 [templates.Obsidian]
 input_path = './templates/obsidian.css'
 output_path = '~/Documentos/Notas/.obsidian/snippets/style.css'
+[templates.Obsidian2]
+input_path = './templates/obsidian.css'
+output_path = '~/Documentos/Carrera/.obsidian/snippets/style.css'
 [templates.folder]
 input_path = '~/.config/matugen/templates/folder-color.txt'
 output_path = '~/.config/matugen/papirus-folders/folder-color.txt'

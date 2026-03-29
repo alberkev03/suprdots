@@ -4,7 +4,7 @@
 @import "./dashboard.css";
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: "Google Sans Flex", "Symbols Nerd Font Propo";
+  font-family: "Google Sans", "Symbols Nerd Font Propo";
   font-weight: 400;
   font-size: 16;
   margin: -1;
@@ -79,7 +79,8 @@ window#waybar {
 }
 #custom-notifications:hover,
 #custom-clipboard:hover,
-#language:hover {
+#language:hover,
+#bluetooth:hover {
   color: @primary;
   transition: 200ms;
 }
