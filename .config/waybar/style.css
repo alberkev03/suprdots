@@ -1,7 +1,7 @@
 @import "./colors.css";
 @import "./workspaces.css";
-@import "./audio.css";
-@import "./dashboard.css";
+@import "./modules-center.css";
+@import "./modules-right.css";
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: "Google Sans", "Symbols Nerd Font Propo";
@@ -21,23 +21,7 @@ window#waybar {
   padding: 0;
   margin: 5 5 1 5;
 }
-.modules-right {
-  background-color: @surface;
-  border-radius: 20px;
-  padding: 4 3 4 3;
-}
-#clock {
-  color: @on_surface;
-  background-color: @surface;
-  padding: 0 15;
-  margin: 1 10;
-  border-radius: 20;
-  transition: 200ms;
-}
-#clock:hover {
-  border-radius: 10;
-  transition: 200ms;
-}
+
 #tray,
 #audio {
   padding: 0 8 0 10;
@@ -79,22 +63,5 @@ window#waybar {
   background-color: @primary;
   color: @surface;
   border-radius: 20;
-  transition: 200ms;
-}
-#custom-notifications,
-#custom-clipboard,
-#language {
-  color: @on_surface;
-  margin: 0 10;
-  transition: 200ms;
-}
-#custom-notifications {
-  margin: 0 10 0 15;
-}
-#custom-notifications:hover,
-#custom-clipboard:hover,
-#language:hover,
-#bluetooth:hover {
-  color: @primary;
   transition: 200ms;
 }
