@@ -4,7 +4,7 @@
   "width": 1920,
   "height": 35,
   //"margin-top": 4,
-  "modules-left": ["hyprland/workspaces", "tray"],
+  "modules-left": ["custom/menu", "hyprland/workspaces", "tray"],
   "modules-center": ["clock", "mpris"],
   "modules-right": [
     "custom/notifications",
@@ -25,6 +25,10 @@
       "default": "",
       "active": "",
     },
+  },
+  "custom/menu": {
+    "format": "󰣇",
+    "on-click": "rofi -show drun",
   },
   "clock": {
     "format": "{:%H:%M}",
@@ -58,11 +62,11 @@
     "on-click": "rofi-bluetooth",
   },
   "cpu": {
-    "format": "  {usage}%",
+    "format": " {usage}%",
     "tooltip": false,
   },
   "memory": {
-    "format": "󰘚  {percentage}%",
+    "format": "󰘚 {percentage}%",
     "tooltip": false,
   },
   "network": {

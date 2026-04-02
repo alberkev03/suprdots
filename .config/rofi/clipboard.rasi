@@ -1,6 +1,6 @@
 @import "./matugen.rasi"
 * {
-    font:                        "Rubik 13";
+    font:                        "Google Sans Flex 13";
   }
 window {
     /* properties for window widget */

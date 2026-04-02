@@ -1,21 +1,17 @@
 #! /usr/bin/env bash
 
-options="Region\nWindow\nAll\nExit"
+options=" Region\n Window\n Exit"
 selected=$(echo -e "$options" | rofi -dmenu -p "Screenshot Mode:" -theme "./screenshot.rasi")
 case "$selected" in
-"Region")
+" Region")
   hyprshot -m region --clipboard-only
   # Command to run for Option A
   ;;
-"Window")
+" Window")
   hyprshot -m window --clipboard-only
   # Command to run for Option B
   ;;
-"Workspace")
-  hyprshot -m output --clipboard-only
-  # Command to run for Option B
-  ;;
-"Exit")
+" Exit")
   exit 0
   ;;
 esac

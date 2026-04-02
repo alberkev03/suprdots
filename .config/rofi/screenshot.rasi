@@ -1,6 +1,6 @@
 @import "./matugen.rasi"
 * {
-    font:                        "Rubik 13";
+    font:                        "JetBrains Mono 13";
   }
 window {
     /* properties for window widget */
@@ -8,11 +8,13 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       500px;
+    width:                       350px;
     x-offset:                    0px;
     y-offset:                    0px;
     /* properties for all widgets */
     enabled:                     true;
+    border:                      2px;
+    border-color:                @primary;
     border-radius:               20px;
     cursor:                      "default";
     background-color:            @surface;
@@ -22,7 +24,6 @@ mainbox {
     spacing:                     0px;
     background-color:            transparent;
     orientation:                 vertical;
-    height:                      600px;
     children:                    ["inputbar","listbox"];
 }
 
@@ -77,24 +78,27 @@ listview {
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
-    layout:                      horizontal;
+    layout:                      vertical;
     reverse:                     false;
+    fixed-height:                false;
     fixed-columns:               true;
+    lines:                       8;
     background-color:            transparent;
     text-color:                  @on-surface;
     cursor:                      "default";
+    border-radius: 10px;
     margin: 0 10px;
 }
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    padding:                     50px 30px;
-    margin:                      2px; 
+    padding:                     10px 20px;
+    margin:                      2px 0px; 
     border-radius:               5px;
     background-color:            @surface-container;
     text-color:                  @on-surface;
     cursor:                      pointer;
-    orientation:                 vertical;
+    orientation:                 horizontal;
 }
 element normal.urgent {
     background-color:            @error;
