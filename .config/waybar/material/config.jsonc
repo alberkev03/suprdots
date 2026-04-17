@@ -36,6 +36,10 @@
     "tooltip": false,
   },
   "group/audio": {
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": true,
+    },
     "orientation": "inherit",
     "modules": ["pulseaudio", "pulseaudio/slider"],
   },
@@ -108,7 +112,7 @@
     "tooltip": "false",
   },
   "hyprland/language": {
-    "format": "󰌌 {shortDescription}",
+    "format": "󰌌  {shortDescription}",
     "on-click": " hyprctl switchxkblayout current next",
   },
   "mpris": {
@@ -119,9 +123,9 @@
     "format-paused": "{player_icon} {title} - {album}",
     "format-stopped": "{stopped_icon} Sin reproducción.",
     "player-icons": {
-      "default": "󰐊",
-      "chrome": "",
-      "spotify": "󰓇",
+      "default": "󰐊 ",
+      "chrome": " ",
+      "spotify": "󰓇 ",
     },
     "tooltip": false,
   },

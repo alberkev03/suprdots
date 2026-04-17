@@ -1,10 +1,7 @@
 @import "./colors.css";
-@import "./workspaces.css";
-@import "./modules-center.css";
-@import "./modules-right.css";
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: "Google Sans", "Symbols Nerd Font Propo";
+  font-family: "Rubik", "Symbols Nerd Font Propo";
   font-weight: 400;
   font-size: 16;
   margin: -1;
@@ -13,13 +10,41 @@
 }
 
 window#waybar {
-  background-color: transparent;
+  background-color: @surface;
 }
-.modules-left,
-.modules-center,
-.modules-right {
-  padding: 0;
-  margin: 5 5 1 5;
+#workspaces {
+  padding: 3;
+}
+#workspaces button {
+  color: @on_surface;
+  margin: 2 1;
+  padding: 0 5;
+  transition: ease-in-out 100ms;
+  border-radius: 0;
+}
+#workspaces button:hover {
+  color: @secondary;
+  background: transparent;
+}
+#workspaces button.active {
+  color: @primary;
+  transition: ease-in-out 200ms;
+  border-bottom: 2 solid @primary;
+}
+
+#clock {
+  color: @primary;
+  margin: 0 10;
+  transition: 200ms;
+}
+#mpris {
+  color: @on_surface;
+  padding: 0 15;
+  transition: 300ms;
+}
+
+#mpris.playing {
+  color: @primary;
 }
 
 #tray,
@@ -29,14 +54,10 @@ window#waybar {
   color: @primary;
 }
 #tray {
-  background-color: @surface;
-  border-radius: 20px;
   margin: 3 10;
   padding: 0 15;
 }
-#tray image {
-  color: @primary;
-}
+
 #tray menu {
   background-color: @surface;
   color: @on_surface;
@@ -51,17 +72,94 @@ window#waybar {
   transition: 200ms;
 }
 #custom-menu {
-  background-color: @surface;
   color: @primary;
   padding: 0 10;
   font-size: 20;
-  border-radius: 8;
   margin: 2;
   transition: 200ms;
 }
 #custom-menu:hover {
   background-color: @primary;
   color: @surface;
-  border-radius: 20;
   transition: 200ms;
+}
+
+#pulseaudio {
+  color: @on_surface;
+  transition: 300ms;
+  font-size: 20;
+  margin: 0 3;
+}
+#pulseaudio:hover {
+  color: @primary;
+  transition: 300ms;
+}
+#pulseaudio-slider {
+  margin: 0 10;
+  padding: 0;
+  border: 0px transparent;
+}
+#pulseaudio-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  background-color: transparent;
+  color: transparent;
+  border: 0px transparent;
+  box-shadow: none;
+}
+#pulseaudio-slider trough {
+  min-height: 8px;
+  min-width: 80px;
+  border-radius: 8;
+  background-color: @surface_container;
+  border: 0px solid transparent;
+  color: transparent;
+}
+#pulseaudio-slider highlight {
+  border-radius: 8;
+  background: @primary;
+}
+#custom-notifications,
+#group-audio,
+#language,
+#bluetooth,
+#network,
+#memory,
+#cpu {
+  margin: 0 10;
+  color: @on_surface;
+}
+
+#group-power {
+  margin: 0 10 0 5;
+}
+#group-power:hover {
+  color: @primary;
+  transition: 200ms;
+  border-radius: 20;
+  padding: 0 4;
+}
+#custom-power,
+#custom-reboot,
+#custom-logout,
+#custom-lock {
+  margin: 6px;
+  padding: 0 4 0 4;
+}
+
+#custom-power:hover {
+  transition: 200ms;
+  color: @red;
+}
+#custom-reboot:hover {
+  transition: 200ms;
+  color: @yellow;
+}
+#custom-logout:hover {
+  transition: 200ms;
+  color: @yellow;
+}
+#custom-lock:hover {
+  transition: 200ms;
+  color: @green;
 }
